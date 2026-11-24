@@ -21,11 +21,9 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
-        with:
-            accept-android-sdk-licenses: true
-          
-       - name: Accept SDK licenses
-        run: yes | sdkmanager --licenses 
+
+      - name: Accept SDK licenses
+        run: yes | sdkmanager --licenses
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
@@ -44,4 +42,3 @@ jobs:
         with:
           name: MacroMimic-APK
           path: MacroMimic/app/build/outputs/apk/debug/*.apk
-          
